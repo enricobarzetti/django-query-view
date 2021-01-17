@@ -6,6 +6,9 @@ authors = ["Enrico Barzetti <enricobarzetti@gmail.com>"]
 readme = "README.rst"
 homepage = "https://github.com/enricobarzetti/django-query-view"
 license = "mit"
+packages = [
+    { include = "query_view" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
