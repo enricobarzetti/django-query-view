@@ -1,0 +1,39 @@
+<a href="{{ url(url_name) }}">Clear</a>
+
+{{ crispy(filter.form) }}
+
+<h1>Records</h1>
+{% for obj in filter.qs %}
+    {{ obj.name }} - {{ obj.is_good }}<br />
+{% else %}
+    No records
+{% endfor %}
+
+<h1>Tags</h1>
+{% for tag in tags %}
+    <a href="{{ tag_url(url_name, filter, tag) }}">{{ tag }} ({{ tag_count(object_list, tag) }})</a>
+    <a href="{{ tag_url(url_name, filter, tag, taggable_manager_name='not_tags') }}">EXCLUDE</a>
+    <br />
+{% endfor %}
+
+<h1>Is Good</h1>
+{% if 'is_good' in filter.form.data %}
+    <a href="{{ remove_filter_url(url_name, filter, 'is_good') }}">Remove {{ filter.form.is_good.value() }}</a><br />
+{% else %}
+    <a href="{{ filter_url(url_name, filter, 'is_good', True) }}">True</a><br />
+    <a href="{{ filter_url(url_name, filter, 'is_good', False) }}">False</a><br />
+{% endif %}
+
+<h1>Actor Tags</h1>
+{% for tag in actor_tags %}
+    <a href="{{ tag_url(url_name, filter, tag, taggable_manager_name='actortaggedthing__typed_tag') }}">{{ tag }} ({{ tag_count(object_list, tag, taggable_manager_name='actortaggedthing__typed_tag') }})</a>
+    <a href="{{ tag_url(url_name, filter, tag, taggable_manager_name='not_actortaggedthing__typed_tag') }}">EXCLUDE</a>
+    <br />
+{% endfor %}
+
+<h1>Director Tags</h1>
+{% for tag in director_tags %}
+    <a href="{{ tag_url(url_name, filter, tag, taggable_manager_name='directortaggedthing__typed_tag') }}">{{ tag }} ({{ tag_count(object_list, tag, taggable_manager_name='directortaggedthing__typed_tag') }})</a>
+    <a href="{{ tag_url(url_name, filter, tag, taggable_manager_name='not_directortaggedthing__typed_tag') }}">EXCLUDE</a>
+    <br />
+{% endfor %}

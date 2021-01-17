@@ -1,0 +1,6 @@
+different data types: groups/lists, text, video, image, file
+certain data types will have fields that others won't.  eg. video has directors, actors. text does not have director
+django-polymorphic might be useful
+provide base class with description, notes, created, updated fields
+autocomplete for tags
+UI should not allow you to exclude and include the same tag

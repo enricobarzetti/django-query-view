@@ -1,0 +1,11 @@
+*.DS_Store
+*.py[co]
+
+# Poetry
+dist/
+*.egg-info
+
+# PyCharm files
+.idea/
+
+db.sqlite3

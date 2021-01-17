@@ -1,0 +1,271 @@
+[
+{
+    "model": "testproject.thing",
+    "pk": 1,
+    "fields": {
+        "name": "leg",
+        "is_good": true
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 2,
+    "fields": {
+        "name": "comprehensive",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 3,
+    "fields": {
+        "name": "circumstance",
+        "is_good": true
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 4,
+    "fields": {
+        "name": "morale",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 5,
+    "fields": {
+        "name": "coerce",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 6,
+    "fields": {
+        "name": "oh",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 7,
+    "fields": {
+        "name": "inflate",
+        "is_good": true
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 8,
+    "fields": {
+        "name": "correction",
+        "is_good": true
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 9,
+    "fields": {
+        "name": "computing",
+        "is_good": true
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 10,
+    "fields": {
+        "name": "appeal",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 11,
+    "fields": {
+        "name": "The Good, the Bad and the Ugly",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.thing",
+    "pk": 12,
+    "fields": {
+        "name": "Gran Torino",
+        "is_good": false
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 1,
+    "fields": {
+        "tag": 1,
+        "content_object": 10
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 2,
+    "fields": {
+        "tag": 1,
+        "content_object": 9
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 3,
+    "fields": {
+        "tag": 2,
+        "content_object": 8
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 4,
+    "fields": {
+        "tag": 3,
+        "content_object": 7
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 5,
+    "fields": {
+        "tag": 4,
+        "content_object": 6
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 6,
+    "fields": {
+        "tag": 5,
+        "content_object": 5
+    }
+},
+{
+    "model": "testproject.taggedthing",
+    "pk": 7,
+    "fields": {
+        "tag": 1,
+        "content_object": 8
+    }
+},
+{
+    "model": "testproject.directortag",
+    "pk": 2,
+    "fields": {
+        "tag": 10
+    }
+},
+{
+    "model": "testproject.directortag",
+    "pk": 3,
+    "fields": {
+        "tag": 11
+    }
+},
+{
+    "model": "testproject.directortaggedthing",
+    "pk": 3,
+    "fields": {
+        "tag": 3,
+        "content_object": 11
+    }
+},
+{
+    "model": "testproject.directortaggedthing",
+    "pk": 4,
+    "fields": {
+        "tag": 2,
+        "content_object": 12
+    }
+},
+{
+    "model": "testproject.actortag",
+    "pk": 3,
+    "fields": {
+        "tag": 10
+    }
+},
+{
+    "model": "testproject.actortaggedthing",
+    "pk": 1,
+    "fields": {
+        "tag": 3,
+        "content_object": 11
+    }
+},
+{
+    "model": "testproject.actortaggedthing",
+    "pk": 2,
+    "fields": {
+        "tag": 3,
+        "content_object": 12
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+        "name": "example",
+        "slug": "example"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+        "name": "other",
+        "slug": "other"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+        "name": "something",
+        "slug": "something"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+        "name": "anything",
+        "slug": "anything"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+        "name": "nothing",
+        "slug": "nothing"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+        "name": "english",
+        "slug": "english"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": {
+        "name": "clint eastwood",
+        "slug": "clint-eastwood"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 11,
+    "fields": {
+        "name": "sergio leone",
+        "slug": "sergio-leone"
+    }
+}
+]
