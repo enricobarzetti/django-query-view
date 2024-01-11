@@ -24,7 +24,7 @@ Set up models
     from taggit.managers import TaggableManager
     from taggit.models import TaggedItemBase
     from query_view.models import TypedTag
-    from query_view.models import make_type_tagged_model
+    from query_view.models import make_typed_tag_tagged_model
 
     class TaggedThing(TaggedItemBase):
         content_object = models.ForeignKey('Thing', on_delete=models.CASCADE)
@@ -44,7 +44,7 @@ Set up models
         pass
 
     # Create your tagged model like this
-    ActorTaggedThing = make_type_tagged_model('ActorTaggedThing', ActorTypedTag, Thing, app_label='testproject')
+    ActorTaggedThing = make_typed_tag_tagged_model('ActorTaggedThing', ActorTypedTag, Thing, app_label='testproject')
 
     # Or like this
     class ActorTaggedThing(TaggedItemBase):

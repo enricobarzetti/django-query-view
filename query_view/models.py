@@ -44,7 +44,7 @@ def create_model(name, fields=None, app_label='', module='', options=None, admin
     return model
 
 
-def make_type_tagged_model(name, type_tag_model, content_model, app_label):
+def make_typed_tag_tagged_model(name, type_tag_model, content_model, app_label):
     fields = {
         'typed_tag': models.ForeignKey(type_tag_model, related_name="%(app_label)s_%(class)s_items", on_delete=models.CASCADE, ),
         'content_object': models.ForeignKey(content_model, on_delete=models.CASCADE),

@@ -2,7 +2,7 @@ from django.db import models
 from taggit.managers import TaggableManager
 from taggit.models import TaggedItemBase
 from query_view.models import TypedTag
-from query_view.models import make_type_tagged_model
+from query_view.models import make_typed_tag_tagged_model
 
 
 class TaggedThing(TaggedItemBase):
@@ -23,18 +23,18 @@ class LanguageTypedTag(TypedTag):
     pass
 
 
-LanguageTaggedThing = make_type_tagged_model('LanguageTaggedThing', LanguageTypedTag, Thing, app_label='testproject')
+LanguageTaggedThing = make_typed_tag_tagged_model('LanguageTaggedThing', LanguageTypedTag, Thing, app_label='testproject')
 
 
 class DirectorTypedTag(TypedTag):
     pass
 
 
-DirectorTaggedThing = make_type_tagged_model('DirectorTaggedThing', DirectorTypedTag, Thing, app_label='testproject')
+DirectorTaggedThing = make_typed_tag_tagged_model('DirectorTaggedThing', DirectorTypedTag, Thing, app_label='testproject')
 
 
 class ActorTypedTag(TypedTag):
     pass
 
 
-ActorTaggedThing = make_type_tagged_model('ActorTaggedThing', ActorTypedTag, Thing, app_label='testproject')
+ActorTaggedThing = make_typed_tag_tagged_model('ActorTaggedThing', ActorTypedTag, Thing, app_label='testproject')
