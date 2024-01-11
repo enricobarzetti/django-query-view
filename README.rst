@@ -20,6 +20,12 @@ Set up models
 
 .. code-block:: python
 
+    from django.db import models
+    from taggit.managers import TaggableManager
+    from taggit.models import TaggedItemBase
+    from query_view.models import TypedTag
+    from query_view.models import make_type_tagged_model
+
     class TaggedThing(TaggedItemBase):
         content_object = models.ForeignKey('Thing', on_delete=models.CASCADE)
 
@@ -33,24 +39,24 @@ Set up models
         def __str__(self):
             return self.name
 
-    # Subclass TagType
-    class ActorTag(TagType):
+    # Subclass TypedTag
+    class ActorTypedTag(TypedTag):
         pass
 
     # Create your tagged model like this
-    ActorTaggedThing = make_tag_type_tagged_model('ActorTaggedThing', ActorTag, Thing, app_label='testproject')
+    ActorTaggedThing = make_type_tagged_model('ActorTaggedThing', ActorTypedTag, Thing, app_label='testproject')
 
     # Or like this
     class ActorTaggedThing(TaggedItemBase):
-        tag = models.ForeignKey(
-            ActorTag,
+        typed_tag = models.ForeignKey(
+            ActorTypedTag,
             related_name="%(app_label)s_%(class)s_items",
             on_delete=models.CASCADE,
         )
         content_object = models.ForeignKey(Thing, on_delete=models.CASCADE)
 
         class Meta:
-            unique_together = ['tag', 'content_object']
+            unique_together = ['typed_tag', 'content_object']
 
 Create a typed tagged item
 -----------------------------
@@ -58,7 +64,7 @@ Create a typed tagged item
 .. code-block:: python
 
     t = Tag.objects.get(name='clint eastwood')
-    ActorTaggedThing.objects.create(content_object=thing, tag=t.actortag)
+    ActorTaggedThing.objects.create(content_object=thing, typed_tag=t.actortypedtag)
 
 Run the test project
 --------------------
@@ -74,4 +80,4 @@ Dump fixture
 
 .. code-block:: bash
 
-    python manage.py dumpdata --indent 4 testproject.Thing testproject.TaggedThing taggit.Tag testproject.LanguageTag testproject.LanguageTaggedThing testproject.DirectorTag testproject.DirectorTaggedThing testproject.ActorTag testproject.ActorTaggedThing --output testproject/fixtures/tag_thing.json
+    python manage.py dumpdata --indent 4 testproject.Thing testproject.TaggedThing taggit.Tag testproject.LanguageTypedTag testproject.LanguageTaggedThing testproject.DirectorTypedTag testproject.DirectorTaggedThing testproject.ActorTypedTag testproject.ActorTaggedThing --output testproject/fixtures/tag_thing.json
