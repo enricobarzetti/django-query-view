@@ -152,14 +152,14 @@
     }
 },
 {
-    "model": "testproject.directortag",
+    "model": "testproject.directortypedtag",
     "pk": 2,
     "fields": {
         "tag": 10
     }
 },
 {
-    "model": "testproject.directortag",
+    "model": "testproject.directortypedtag",
     "pk": 3,
     "fields": {
         "tag": 11
@@ -169,7 +169,7 @@
     "model": "testproject.directortaggedthing",
     "pk": 3,
     "fields": {
-        "tag": 3,
+        "typed_tag": 3,
         "content_object": 11
     }
 },
@@ -177,12 +177,12 @@
     "model": "testproject.directortaggedthing",
     "pk": 4,
     "fields": {
-        "tag": 2,
+        "typed_tag": 2,
         "content_object": 12
     }
 },
 {
-    "model": "testproject.actortag",
+    "model": "testproject.actortypedtag",
     "pk": 3,
     "fields": {
         "tag": 10
@@ -192,7 +192,7 @@
     "model": "testproject.actortaggedthing",
     "pk": 1,
     "fields": {
-        "tag": 3,
+        "typed_tag": 3,
         "content_object": 11
     }
 },
@@ -200,7 +200,7 @@
     "model": "testproject.actortaggedthing",
     "pk": 2,
     "fields": {
-        "tag": 3,
+        "typed_tag": 3,
         "content_object": 12
     }
 },
