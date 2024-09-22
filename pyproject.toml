@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-query-view"
-version = "0.1.4"
+version = "0.1.6"
 description = "Django view for querying data"
 authors = ["Enrico Barzetti <enricobarzetti@gmail.com>"]
 readme = "README.rst"
